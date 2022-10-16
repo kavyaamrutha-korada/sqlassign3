@@ -1,0 +1,22 @@
+create table custdetails(cname nvarchar(20),cphno nvarchar(10));
+insert into custdetails values('hariroy',7788996655);
+insert into custdetails values('ammurao',9977665544);
+insert into custdetails values('navyath',8855664411);
+select *from custdetails;
+alter table custdetails add category nvarchar(20);
+update custdetails set category='seafood' where cname='hariroy';
+update custdetails set category='fastfood' where cname='ammurao';
+update custdetails set category='liquids' where cname='navyath';
+alter table custdetailsadd country nvarchar(20);
+update custdetails set country='India' where cname='hariroy';
+update custdetails set country='America' where cname-='ammurao';
+update custdetails set country='Asia' where cname='navyath';
+alter table custdetails add depname nvarchar(20);
+update custdetails set depname='aam' where cname='harriroy';
+update custdetails set depname='mro' where cname='ammurao';
+update custdetails set depname='vro' where cname='navyath';
+select cporder from custdetails where cpno=9977665544;
+select categorysub from custdetails where category='seafood';
+select cname,cporder from custdetails where country='asia';
+select cname,depname,ratings from custdetails; 
+ 
